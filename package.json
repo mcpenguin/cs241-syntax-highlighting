@@ -1,0 +1,25 @@
+{
+    "name": "cs241-syntax-highlighting",
+    "displayName": "CS241 Syntax Highlighting",
+    "description": "Syntax highlighting for CS241",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hex",
+            "aliases": ["CS241 Hex", "hex"],
+            "extensions": [".hex"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hex",
+            "scopeName": "",
+            "path": "./syntaxes/hex.tmLanguage.json"
+        }]
+    }
+}
