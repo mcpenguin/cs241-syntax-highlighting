@@ -6,9 +6,19 @@
 	    { 
             name: "comment", 
             begin: ;, 
-            end: \n 
-        }
-	],
+            end: \n,
+        },
+        # registers ($X) - treat as "variables"
+        {
+            name: "variable",
+            match: "\\$[0-9]+",
+        },
+        # key words (ie assem lang cmds) - treat as keyword
+        {
+            name: "keyword",
+            match: "add|sub",
+        },
+    ],
     repository:
         {
             keywords:
@@ -30,10 +40,21 @@
                         [{ name: constant.character.escape.hex, match: \\\\. }],
                 },
         },
-    tokenColors:
+    tokenColors: [
         {
             scope: comment,
-            settings: { foreground: "#dd0000", fontStyle: "italic" },
+            settings: { 
+                foreground: "#dd0000", 
+                fontStyle: "italic" 
+            },
         },
+        {
+            scope: variable,
+            settings: { 
+                foreground: "#0000dd", 
+                fontStyle: "bold" 
+            },
+        },
+    ],
     scopeName: "source.hex",
 }

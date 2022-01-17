@@ -1,2 +1,22 @@
-
-; this is a comment
+; Sum1ToN adds all numbers 1 to N
+; Registers:
+; $1 scratch (original value should be preserved)
+; $2 input number, N (original value should be preserved)
+; $3 output (don’t preserve original value)
+Sum1ToN:
+sw $1, -4($30) ; save previous value of $1
+sw $2, -8($30) ; save previous value of $2
+lis $1
+.word 8
+sub $30, $30, $1 ; update stack pointer
+add $3, $0, $0 ; initialize to 0
+lis $1
+.word -1
+loop: add $3, $3, $2
+add $2, $2, $1
+bne $2, $0, loop
+lis $1
+.word 8
+add $30, $30, $1 ; update stack pointer
+lw $1, -4($30) ; restore original value of $1
+lw $2, -8($30) ; restore

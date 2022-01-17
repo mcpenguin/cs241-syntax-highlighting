@@ -1,19 +1,57 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "CS241 Hex",
-	"patterns": [
-		{
-			"name": "comment",
-			"begin": ";",
-			"end": "\n"
-		}
-	],
-	"tokenColors": {
-		"scope": "comment",
-		"settings": {
-			"foreground": "#dd0000",
-			"fontStyle": "italic"
-		}
-	},
-	"scopeName": "source.hex"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "CS241 Hex",
+  "patterns": [
+    {
+      "name": "comment",
+      "begin": ";",
+      "end": "\\n"
+    },
+    {
+      "name": "variable",
+      "match": "\\$[0-9]+[)  \n]"
+    },
+    {
+      "name": "keyword",
+      "match": "add|sub"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.hex",
+          "match": "\\\\b(if|while|for|return)\\\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.hex",
+      "begin": "\\",
+      "end": "\\",
+      "patterns": [
+        {
+          "name": "constant.character.escape.hex",
+          "match": "\\\\\\\\."
+        }
+      ]
+    }
+  },
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#dd0000",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#0000dd",
+        "fontStyle": "bold"
+      }
+    }
+  ],
+  "scopeName": "source.hex"
 }
