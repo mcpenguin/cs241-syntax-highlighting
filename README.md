@@ -79,3 +79,10 @@ After downloading, do the following steps:
 }
 ```
 This activates the color scheme. You can also customize the colors if you want.
+
+## Version History
+
+### 1.0.0
+
+Initial release
+
