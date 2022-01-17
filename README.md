@@ -1,65 +1,81 @@
-# cs241-syntax-highlighting README
+# CS241 Syntax Highlighting
 
-This is the README for your extension "cs241-syntax-highlighting". After writing up a brief description, we recommend including the following sections.
+This is a VS Code extension that adds syntax highlighting for the CS241 ASL (written in .hex) files.
 
-## Features
+After downloading, do the following steps:
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+1. Open `settings.json`
+2. Add the following piece of text to the end of the json file:
+```json
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "hex.comment",
+                "settings": {
+                    "foreground": "#666666",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                // registers
+                "scope": "hex.register",
+                "settings": {
+                    "foreground": "#d4975e",
+                }
+            },
+            {
+                "scope": "hex.operation",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.literal",
+                "settings": {
+                    "foreground": "#67a2e6",
+                }
+            },
+            {
+                "scope": "hex.loadstore",
+                "settings": {
+                    "foreground": "#a5e791",
+                }
+            },
+            {
+                "scope": "hex.setless",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.branch",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.jump",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.constant",
+                "settings": {
+                    "foreground": "#dd6bd4",
+                }
+            },
+            {
+                // labels
+                "scope": "hex.label",
+                "settings": {
+                    "foreground": "#d8d789",
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    }
+}
+```
+This activates the color scheme. You can also customize the colors if you want.
