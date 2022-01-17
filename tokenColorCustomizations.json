@@ -4,34 +4,65 @@
             {
                 "scope": "hex.comment",
                 "settings": {
-                    "foreground": "#9e9e9e"
+                    "foreground": "#666666",
+                    "fontStyle": "italic"
                 }
             },
             {
                 // registers
-                "scope": "hex.variable",
+                "scope": "hex.register",
                 "settings": {
-                    "foreground": "#f1a966",
+                    "foreground": "#d4975e",
                 }
             },
             {
-                // keyword
-                "scope": "hex.keyword",
+                "scope": "hex.operation",
                 "settings": {
                     "foreground": "#67e6df",
                 }
             },
             {
-                "scope": "hex.number",
+                "scope": "hex.literal",
                 "settings": {
-                    "foreground": "#9461cf",
+                    "foreground": "#67a2e6",
+                }
+            },
+            {
+                "scope": "hex.loadstore",
+                "settings": {
+                    "foreground": "#a5e791",
+                }
+            },
+            {
+                "scope": "hex.setless",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.branch",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.jump",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.constant",
+                "settings": {
+                    "foreground": "#dd6bd4",
                 }
             },
             {
                 // labels
-                "scope": "hex.string",
+                "scope": "hex.label",
                 "settings": {
                     "foreground": "#d8d789",
+                    "fontStyle": "bold"
                 }
             }
         ]

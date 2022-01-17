@@ -10,24 +10,47 @@
         },
         # registers ($X) - treat as "variables"
         {
-            name: "hex.variable",
+            name: "hex.register",
             match: "\\$([0-9])+",
         },
-        # key words (ie assem lang cmds) - treat as keyword
+        # literals (lis, .word)
         {
-            name: "hex.keyword",
-            match: "add|sub",
+            name: "hex.literal",
+            match: "lis|\\.word",
+        },
+        # operations (+, -, *, /)
+        {
+            name: "hex.operation",
+            match: "add|sub|mult|multu|div|divu",
+        },
+        # load and store word (lw, sw)
+        {
+            name: "hex.loadstore",
+            match: "lw|sw",
+        },
+        # set less than (slt, sltu)
+        {
+            name: "hex.setless",
+            match: "slt|sltu",
+        },
+        # branch (beq, bne)
+        {
+            name: "hex.branch",
+            match: "beq|bne",
+        },
+        # jump (jr, jalr)
+        {
+            name: "hex.jump",
+            match: "jr|jalr",
         },
         # numbers
-        # can be positive or negative
         {
-            name: "hex.number",
+            name: "hex.constant",
             match: "[0-9]+|-[0-9]+",
         },
         # labels - treat as label
-        # label = any word that is not a keyword
         {
-            name: "hex.string",
+            name: "hex.label",
             match: "\\w+",
         },
     ],

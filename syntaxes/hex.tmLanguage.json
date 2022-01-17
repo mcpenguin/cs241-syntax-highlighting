@@ -8,19 +8,39 @@
       "end": "\\n"
     },
     {
-      "name": "hex.variable",
+      "name": "hex.register",
       "match": "\\$([0-9])+"
     },
     {
-      "name": "hex.keyword",
-      "match": "add|sub"
+      "name": "hex.literal",
+      "match": "lis|\\.word"
     },
     {
-      "name": "hex.number",
+      "name": "hex.operation",
+      "match": "add|sub|mult|multu|div|divu"
+    },
+    {
+      "name": "hex.loadstore",
+      "match": "lw|sw"
+    },
+    {
+      "name": "hex.setless",
+      "match": "slt|sltu"
+    },
+    {
+      "name": "hex.branch",
+      "match": "beq|bne"
+    },
+    {
+      "name": "hex.jump",
+      "match": "jr|jalr"
+    },
+    {
+      "name": "hex.constant",
       "match": "[0-9]+|-[0-9]+"
     },
     {
-      "name": "hex.string",
+      "name": "hex.label",
       "match": "\\w+"
     }
   ],
