@@ -9,17 +9,37 @@
     "categories": [
         "Programming Languages"
     ],
+    "configurationDefaults": {
+        "hex": {
+          "editor.semanticHighlighting.enabled": true
+        }
+    },
     "contributes": {
-        "languages": [{
-            "id": "hex",
-            "aliases": ["CS241 Hex", "hex"],
-            "extensions": [".hex"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "hex",
-            "scopeName": "",
-            "path": "./syntaxes/hex.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "hex",
+                "aliases": [
+                    "CS241 Hex",
+                    "hex"
+                ],
+                "extensions": [
+                    ".hex"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "hex",
+                "scopeName": "source.hex",
+                "path": "./syntaxes/hex.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^4.1.0"
+    },
+    "scripts": {
+        "build": "npx js-yaml syntaxes/hex.tmLanguage.yaml > syntaxes/hex.tmLanguage.json"
     }
 }
