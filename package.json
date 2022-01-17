@@ -9,6 +9,7 @@
     "categories": [
         "Programming Languages"
     ],
+    "repository": "https://github.com/mcpenguin/cs241-syntax-highlighting",
     "contributes": {
         "languages": [
             {
