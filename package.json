@@ -9,11 +9,6 @@
     "categories": [
         "Programming Languages"
     ],
-    "configurationDefaults": {
-        "hex": {
-          "editor.semanticHighlighting.enabled": true
-        }
-    },
     "contributes": {
         "languages": [
             {

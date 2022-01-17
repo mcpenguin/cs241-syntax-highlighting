@@ -1,0 +1,39 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "hex.comment",
+                "settings": {
+                    "foreground": "#9e9e9e"
+                }
+            },
+            {
+                // registers
+                "scope": "hex.variable",
+                "settings": {
+                    "foreground": "#f1a966",
+                }
+            },
+            {
+                // keyword
+                "scope": "hex.keyword",
+                "settings": {
+                    "foreground": "#67e6df",
+                }
+            },
+            {
+                "scope": "hex.number",
+                "settings": {
+                    "foreground": "#9461cf",
+                }
+            },
+            {
+                // labels
+                "scope": "hex.string",
+                "settings": {
+                    "foreground": "#d8d789",
+                }
+            }
+        ]
+    }
+}

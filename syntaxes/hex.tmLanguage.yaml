@@ -4,56 +4,31 @@
     patterns: [
         # comments
 	    { 
-            name: "comment", 
+            name: "hex.comment", 
             begin: ;, 
             end: \n,
         },
         # registers ($X) - treat as "variables"
         {
-            name: "variable",
-            match: "\\$[0-9]+",
+            name: "hex.variable",
+            match: "\\$([0-9])+",
         },
         # key words (ie assem lang cmds) - treat as keyword
         {
-            name: "keyword",
+            name: "hex.keyword",
             match: "add|sub",
         },
-    ],
-    repository:
+        # numbers
+        # can be positive or negative
         {
-            keywords:
-                {
-                    patterns:
-                        [
-                            {
-                                name: keyword.control.hex,
-                                match: \\b(if|while|for|return)\\b,
-                            },
-                        ],
-                },
-            strings:
-                {
-                    name: string.quoted.double.hex,
-                    begin: \,
-                    end: \,
-                    patterns:
-                        [{ name: constant.character.escape.hex, match: \\\\. }],
-                },
+            name: "hex.number",
+            match: "[0-9]+|-[0-9]+",
         },
-    tokenColors: [
+        # labels - treat as label
+        # label = any word that is not a keyword
         {
-            scope: comment,
-            settings: { 
-                foreground: "#dd0000", 
-                fontStyle: "italic" 
-            },
-        },
-        {
-            scope: variable,
-            settings: { 
-                foreground: "#0000dd", 
-                fontStyle: "bold" 
-            },
+            name: "hex.string",
+            match: "\\w+",
         },
     ],
     scopeName: "source.hex",

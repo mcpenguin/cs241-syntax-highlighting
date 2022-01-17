@@ -3,54 +3,25 @@
   "name": "CS241 Hex",
   "patterns": [
     {
-      "name": "comment",
+      "name": "hex.comment",
       "begin": ";",
       "end": "\\n"
     },
     {
-      "name": "variable",
-      "match": "\\$[0-9]+[)  \n]"
+      "name": "hex.variable",
+      "match": "\\$([0-9])+"
     },
     {
-      "name": "keyword",
+      "name": "hex.keyword",
       "match": "add|sub"
-    }
-  ],
-  "repository": {
-    "keywords": {
-      "patterns": [
-        {
-          "name": "keyword.control.hex",
-          "match": "\\\\b(if|while|for|return)\\\\b"
-        }
-      ]
-    },
-    "strings": {
-      "name": "string.quoted.double.hex",
-      "begin": "\\",
-      "end": "\\",
-      "patterns": [
-        {
-          "name": "constant.character.escape.hex",
-          "match": "\\\\\\\\."
-        }
-      ]
-    }
-  },
-  "tokenColors": [
-    {
-      "scope": "comment",
-      "settings": {
-        "foreground": "#dd0000",
-        "fontStyle": "italic"
-      }
     },
     {
-      "scope": "variable",
-      "settings": {
-        "foreground": "#0000dd",
-        "fontStyle": "bold"
-      }
+      "name": "hex.number",
+      "match": "[0-9]+|-[0-9]+"
+    },
+    {
+      "name": "hex.string",
+      "match": "\\w+"
     }
   ],
   "scopeName": "source.hex"
