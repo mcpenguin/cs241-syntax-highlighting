@@ -1,6 +1,6 @@
 # CS241 Syntax Highlighting
 
-This is a VS Code extension that adds syntax highlighting for the CS241 ASL (written in .hex) files.
+This is a VS Code extension that adds syntax highlighting for the CS241 ASL (written in .asm) files.
 
 After downloading, do the following steps:
 
@@ -11,7 +11,7 @@ After downloading, do the following steps:
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
-                "scope": "hex.comment",
+                "scope": "asm.comment",
                 "settings": {
                     "foreground": "#666666",
                     "fontStyle": "italic"
@@ -19,56 +19,56 @@ After downloading, do the following steps:
             },
             {
                 // registers
-                "scope": "hex.register",
+                "scope": "asm.register",
                 "settings": {
                     "foreground": "#d4975e",
                 }
             },
             {
-                "scope": "hex.operation",
+                "scope": "asm.operation",
                 "settings": {
                     "foreground": "#67e6df",
                 }
             },
             {
-                "scope": "hex.literal",
+                "scope": "asm.literal",
                 "settings": {
                     "foreground": "#67a2e6",
                 }
             },
             {
-                "scope": "hex.loadstore",
+                "scope": "asm.loadstore",
                 "settings": {
                     "foreground": "#a5e791",
                 }
             },
             {
-                "scope": "hex.setless",
+                "scope": "asm.setless",
                 "settings": {
                     "foreground": "#67e6df",
                 }
             },
             {
-                "scope": "hex.branch",
+                "scope": "asm.branch",
                 "settings": {
                     "foreground": "#67e6df",
                 }
             },
             {
-                "scope": "hex.jump",
+                "scope": "asm.jump",
                 "settings": {
                     "foreground": "#67e6df",
                 }
             },
             {
-                "scope": "hex.constant",
+                "scope": "asm.constant",
                 "settings": {
                     "foreground": "#dd6bd4",
                 }
             },
             {
                 // labels
-                "scope": "hex.label",
+                "scope": "asm.label",
                 "settings": {
                     "foreground": "#d8d789",
                     "fontStyle": "bold"

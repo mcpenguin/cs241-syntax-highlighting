@@ -14,22 +14,22 @@
     "contributes": {
         "languages": [
             {
-                "id": "hex",
+                "id": "asm",
                 "aliases": [
-                    "CS241 Hex",
-                    "hex"
+                    "CS241 asm",
+                    "asm"
                 ],
                 "extensions": [
-                    ".hex"
+                    ".asm"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "hex",
-                "scopeName": "source.hex",
-                "path": "./syntaxes/hex.tmLanguage.json"
+                "language": "asm",
+                "scopeName": "source.asm",
+                "path": "./syntaxes/asm.tmLanguage.json"
             }
         ]
     },
@@ -37,6 +37,6 @@
         "js-yaml": "^4.1.0"
     },
     "scripts": {
-        "build": "npx js-yaml syntaxes/hex.tmLanguage.yaml > syntaxes/hex.tmLanguage.json"
+        "build": "npx js-yaml syntaxes/asm.tmLanguage.yaml > syntaxes/asm.tmLanguage.json"
     }
 }

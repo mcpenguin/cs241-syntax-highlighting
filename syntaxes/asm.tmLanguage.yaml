@@ -1,0 +1,27 @@
+{
+    $schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json,
+    name: CS241 asm,
+    patterns: [
+            # comments
+            { name: "asm.comment", begin: ;, end: \n },
+            # registers ($X) - treat as "variables"
+            { name: "asm.register", match: "\\$([0-9])+" },
+            # literals (lis, .word)
+            { name: "asm.literal", match: "lis|\\.word" },
+            # operations (+, -, *, /)
+            { name: "asm.operation", match: "add|sub|mult|multu|div|divu" },
+            # load and store word (lw, sw)
+            { name: "asm.loadstore", match: "lw|sw" },
+            # set less than (slt, sltu)
+            { name: "asm.setless", match: "slt|sltu" },
+            # branch (beq, bne)
+            { name: "asm.branch", match: "beq|bne" },
+            # jump (jr, jalr)
+            { name: "asm.jump", match: "jr|jalr" },
+            # numbers
+            { name: "asm.constant", match: "[0-9]+|-[0-9]+" },
+            # labels - treat as label
+            { name: "asm.label", match: "\\w+" },
+        ],
+    scopeName: "source.asm",
+}
